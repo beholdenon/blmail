@@ -1,0 +1,287 @@
+/* =============================================================================
+   MAIN
+   ========================================================================== */
+
+/**
+ * This is main SCSS file. We import every partial into this file. Do not remove
+ * partials if you don't need them, comment them out instead.
+ */
+
+/* Charset
+   ========================================================================== */
+
+@charset "UTF-8";
+
+
+
+/* Partials
+   ========================================================================== */
+
+@import 'settings';
+@import 'reset';
+@import 'page';
+@import 'images';
+@import 'typography';
+@import 'table';
+@import 'grid';
+//@import 'preheader';
+//@import 'buttons';
+//@import 'hero';
+@import 'utilities';
+
+p {
+	font-weight: 500;
+}
+
+.top-black-bar {
+	background: $color-black;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	color: $color-white;
+	font-weight: 800;
+	font-size: 11px;
+	text-align: center;
+	line-height: 16.5px;
+
+	a {
+		color: #ffffff;
+		text-decoration: none;
+		display: block;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+.b-logo-outer {
+	text-align: center;
+}
+
+.b-logo {
+	max-width: 242px;
+}
+
+.footer-links td {
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 1.2px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	a {
+		width: 100%;
+		height: 100%;
+		display: block;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+		display: block;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+}
+
+.footer-links-padding {
+	padding-top: 31px;
+}
+
+.bops-bar {
+	letter-spacing: 0.8px;
+	line-height: 22px;
+	margin-top: 31px;
+
+	td {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+		width: 100%;
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+		margin-top: 25px;
+	}
+
+	a {
+		font-weight: 800;
+		margin-left: 10px;
+
+		@media (max-width: $breakpoint-mobile) {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.locator-pin {
+		vertical-align: middle;
+		max-width: 48px;
+
+		@media (max-width: $breakpoint-mobile) {
+			display: block;
+			margin-left: auto !important;
+			margin-right: auto !important;
+			padding-bottom: 5px !important;
+		}
+	}
+}
+
+.social-app {
+	margin-top: 37px;
+
+	p {
+		margin-bottom: 10px;
+		margin-top: 0;
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+		width: 84%;
+
+		td {
+			display: block;
+		}
+	}
+}
+
+.app-outer {
+	padding-top: 0;
+	padding-bottom: 0;
+
+	@media (max-width: $breakpoint-mobile) {
+		padding-top: 38px !important;
+		padding-bottom: 5px !important;
+	}
+}
+
+.app-icon {
+	max-width: 122px;
+}
+
+.social-icon-container {
+	td {
+		width: 44px !important;
+
+		@media (max-width: $breakpoint-mobile) {
+			width: 44px !important;
+			display: table-cell !important;
+		}
+	}
+}
+
+.social-btns {
+	padding-top: 0;
+	padding-bottom: 0;
+	border-right: 1px solid #e5e5e5;
+
+	@media (max-width: $breakpoint-mobile) {
+		border-right: none !important;
+		border-bottom: 1px solid #e5e5e5;
+		padding-bottom: 41px !important;
+		padding-top: 0 !important;
+	}
+}
+
+.footer-sub {
+	@media (max-width: $breakpoint-mobile) {
+		width: 84%;
+	}
+	margin-top: 50px;
+	border-top: 1px solid #e5e5e5;
+}
+
+.footer-links-sub td {
+	font-size: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	letter-spacing: 0.9px;
+	font-weight: 500;
+	line-height: 30px;
+
+	@media (max-width: $breakpoint-mobile) {
+		display: block !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		@media (max-width: $breakpoint-mobile) {
+			padding-top: 3.2px !important;
+			padding-bottom: 3.2px !important;
+		}
+	}
+}
+
+.copyright {
+	td {
+		padding-top: 4px;
+
+		p {
+			font-size: 10px;
+			line-height: 11px;
+
+			a {
+				text-decoration: underline;
+			}
+		}
+
+		@media (max-width: $breakpoint-mobile) {
+			padding-top: 11px !important;
+		}
+	}
+
+	@media (max-width: $breakpoint-mobile) {
+		width: 250px;
+
+		p {
+			line-height: 15px;
+		}
+
+		span {
+			display: block !important;
+		}
+	}
+}
+
+.fine-print {
+	margin-top: 30px;
+
+	@media (max-width: $breakpoint-mobile) {
+		width: 100%;
+	}
+
+	td {
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		p {
+			color: #767676;
+			font-size: 10px;
+			line-height: 16px;
+		}
+
+		a {
+			color: #767676;
+		}
+
+		.font-bold {
+			margin-top: 10px;
+			margin-bottom: 0;
+		}
+
+		.font-body {
+			margin-top: 0px;
+		}
+	}
+}
+
+
