@@ -29,33 +29,43 @@
 //@import 'hero';
 @import 'utilities';
 
+@mixin block-link() {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+$footer-links-padding-y: 5px;
+$footer-links-padding-y-small: 4px;
+
+u ~ div .main-wrapper {
+	min-width: 100vw !important;
+}
+
 p {
 	font-weight: 500;
 }
 
 .top-black-bar {
 	background: $color-black;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 16px;
-	padding-right: 16px;
 	color: $color-white;
 	font-weight: 800;
 	font-size: 11px;
-	text-align: center;
 	line-height: 16.5px;
 
 	a {
-		color: #ffffff;
-		text-decoration: none;
-		display: block;
-		height: 100%;
-		width: 100%;
-	}
-}
+		color: $color-white;
+		padding-top: 8px;
+		padding-bottom: 8px;
 
-.b-logo-outer {
-	text-align: center;
+		@include block-link;
+
+		@media (max-width: $breakpoint-mobile) {
+			max-width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 
 .b-logo {
@@ -70,17 +80,15 @@ p {
 	padding-right: 15px;
 
 	a {
-		width: 100%;
-		height: 100%;
-		display: block;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		@include block-link;
+		padding-top: $footer-links-padding-y;
+		padding-bottom: $footer-links-padding-y;
 	}
 
 	@media (max-width: $breakpoint-mobile) {
 		display: block;
-		padding-top: 4px;
-		padding-bottom: 4px;
+		padding-top: $footer-links-padding-y-small;
+		padding-bottom: $footer-links-padding-y-small;
 	}
 }
 
@@ -93,17 +101,14 @@ p {
 	line-height: 22px;
 	margin-top: 31px;
 
+	@media (max-width: $breakpoint-mobile) {
+		width: 100%;
+		margin-top: 25px;
+	}
+
 	td {
 		padding-top: 10px;
 		padding-bottom: 10px;
-	}
-
-	@media (max-width: $breakpoint-mobile) {
-		width: 100%;
-	}
-
-	@media (max-width: $breakpoint-mobile) {
-		margin-top: 25px;
 	}
 
 	a {
@@ -112,8 +117,8 @@ p {
 
 		@media (max-width: $breakpoint-mobile) {
 			display: block;
-			margin-left: auto;
-			margin-right: auto;
+			margin-left: auto !important;
+			margin-right: auto !important;
 		}
 	}
 
@@ -133,17 +138,17 @@ p {
 .social-app {
 	margin-top: 37px;
 
-	p {
-		margin-bottom: 10px;
-		margin-top: 0;
-	}
-
 	@media (max-width: $breakpoint-mobile) {
 		width: 84%;
 
 		td {
 			display: block;
 		}
+	}
+
+	p {
+		margin-bottom: 10px;
+		margin-top: 0;
 	}
 }
 
@@ -175,22 +180,23 @@ p {
 .social-btns {
 	padding-top: 0;
 	padding-bottom: 0;
-	border-right: 1px solid #e5e5e5;
+	border-right: 1px solid $color-light-gray;
 
 	@media (max-width: $breakpoint-mobile) {
 		border-right: none !important;
-		border-bottom: 1px solid #e5e5e5;
+		border-bottom: 1px solid $color-light-gray;
 		padding-bottom: 41px !important;
 		padding-top: 0 !important;
 	}
 }
 
 .footer-sub {
+	margin-top: 50px;
+	border-top: 1px solid $color-light-gray;
+
 	@media (max-width: $breakpoint-mobile) {
 		width: 84%;
 	}
-	margin-top: 50px;
-	border-top: 1px solid #e5e5e5;
 }
 
 .footer-links-sub td {
@@ -208,9 +214,7 @@ p {
 	}
 
 	a {
-		display: block;
-		width: 100%;
-		height: 100%;
+		@include block-link;
 
 		@media (max-width: $breakpoint-mobile) {
 			padding-top: 3.2px !important;
@@ -264,13 +268,13 @@ p {
 		padding-bottom: 20px;
 
 		p {
-			color: #767676;
+			color: $color-dark-gray;
 			font-size: 10px;
 			line-height: 16px;
 		}
 
 		a {
-			color: #767676;
+			color: $color-dark-gray;
 		}
 
 		.font-bold {
