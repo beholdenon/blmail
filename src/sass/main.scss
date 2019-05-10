@@ -35,23 +35,34 @@
 	width: 100%;
 }
 
+@font-face {
+	font-family: 'Avenir';
+	src: local('Avenir Roman'), local('Avenir LT W01 55 Roman'), url('https://www.bloomingdales.com/styles/common/fonts/avenir/b9ebb19d-88c1-4cbd-9baf-cf51972422ec.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: local('Avenir Heavy'), local('Avenir LT W01 85 Heavy'), url('https://www.bloomingdales.com/styles/common/fonts/avenir/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff') format('woff');
+	font-style: normal;
+	font-weight: bold;
+}
+
 $footer-links-padding-y: 5px;
 $footer-links-padding-y-small: 4px;
+
 
 u ~ div .main-wrapper {
 	min-width: 100vw !important;
 }
 
-p {
-	font-weight: 500;
-}
-
 .top-black-bar {
 	background: $color-black;
 	color: $color-white;
-	font-weight: 800;
 	font-size: 11px;
 	line-height: 16.5px;
+	font-weight: bold;
 
 	a {
 		color: $color-white;
@@ -74,7 +85,7 @@ p {
 
 .footer-links td {
 	font-size: 12px;
-	font-weight: 800;
+	font-weight: bold;
 	letter-spacing: 1.2px;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -112,7 +123,7 @@ p {
 	}
 
 	a {
-		font-weight: 800;
+		font-weight: bold;
 		margin-left: 10px;
 
 		@media (max-width: $breakpoint-mobile) {
@@ -200,11 +211,10 @@ p {
 }
 
 .footer-links-sub td {
-	font-size: 10px;
+	font-size: 10px !important;
 	padding-left: 8px;
 	padding-right: 8px;
 	letter-spacing: 0.9px;
-	font-weight: 500;
 	line-height: 30px;
 
 	@media (max-width: $breakpoint-mobile) {
