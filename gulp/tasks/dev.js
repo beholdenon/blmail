@@ -6,7 +6,7 @@ exports.server = server;
 // Start server w/ live reload
 function server( done ) {
 	connect.server( {
-		port: 8081,
+		port: 3000,
 		root: 'dist/',
 		livereload: true,
 		host: '11.177.174.75',

@@ -113,8 +113,8 @@ u ~ div .main-wrapper {
 	margin-top: 31px;
 
 	@media (max-width: $breakpoint-mobile) {
-		width: 100%;
-		margin-top: 25px;
+		width: 84%;
+		margin-top: 25px !important;
 	}
 
 	td {
@@ -151,6 +151,7 @@ u ~ div .main-wrapper {
 
 	@media (max-width: $breakpoint-mobile) {
 		width: 84%;
+		margin-top: 27px !important;
 
 		td {
 			display: block;
@@ -168,7 +169,7 @@ u ~ div .main-wrapper {
 	padding-bottom: 0;
 
 	@media (max-width: $breakpoint-mobile) {
-		padding-top: 38px !important;
+		padding-top: 28px !important;
 		padding-bottom: 5px !important;
 	}
 }
@@ -196,17 +197,18 @@ u ~ div .main-wrapper {
 	@media (max-width: $breakpoint-mobile) {
 		border-right: none !important;
 		border-bottom: 1px solid $color-light-gray;
-		padding-bottom: 41px !important;
+		padding-bottom: 31px !important;
 		padding-top: 0 !important;
 	}
 }
 
 .footer-sub {
-	margin-top: 50px;
+	margin-top: 40px;
 	border-top: 1px solid $color-light-gray;
 
 	@media (max-width: $breakpoint-mobile) {
 		width: 84%;
+		margin-top: 31px !important;
 	}
 }
 
@@ -234,8 +236,11 @@ u ~ div .main-wrapper {
 }
 
 .copyright {
+	margin-top: 15px;
+
 	td {
 		padding-top: 4px;
+		color: #767676;
 
 		p {
 			font-size: 10px;
@@ -243,6 +248,7 @@ u ~ div .main-wrapper {
 
 			a {
 				text-decoration: underline;
+				color: #767676 !important;
 			}
 		}
 
@@ -272,8 +278,6 @@ u ~ div .main-wrapper {
 	}
 
 	td {
-		padding-left: 30px;
-		padding-right: 30px;
 		padding-top: 20px;
 		padding-bottom: 20px;
 
@@ -294,6 +298,11 @@ u ~ div .main-wrapper {
 
 		.font-body {
 			margin-top: 0px;
+		}
+
+		@media (max-width: $breakpoint-mobile) {
+			padding-left: 30px !important;
+			padding-right: 30px !important;
 		}
 	}
 }
