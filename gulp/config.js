@@ -9,9 +9,9 @@ module.exports = {
 				src: [ 'dist/**/*.html' ],
 				dest: [ 'dist' ],
 				options: {
-					collapseWhitespace: true,
+					collapseWhitespace: false,
 					keepClosingSlash: true,
-					minifyCSS: true,
+					minifyCSS: false,
 					removeComments: true,
 					processConditionalComments: true,
 				},

@@ -35,46 +35,27 @@
 	width: 100%;
 }
 
-@font-face {
-	font-family: 'Avenir';
-	src: local('Avenir Roman'), local('Avenir LT W01 55 Roman'), url('https://www.bloomingdales.com/styles/common/fonts/avenir/b9ebb19d-88c1-4cbd-9baf-cf51972422ec.woff') format('woff');
-	font-style: normal;
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: 'Avenir';
-	src: local('Avenir Heavy'), local('Avenir LT W01 85 Heavy'), url('https://www.bloomingdales.com/styles/common/fonts/avenir/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff') format('woff');
-	font-style: normal;
-	font-weight: bold;
-}
-
-$footer-links-padding-y: 5px;
+$footer-links-padding-y: 12px;
 $footer-links-padding-y-small: 4px;
 
-
-u ~ div .main-wrapper {
-	min-width: 100vw !important;
-}
 
 .top-black-bar {
 	background: $color-black;
 	color: $color-white;
 	font-size: 11px;
-	line-height: 16.5px;
+	line-height: 13px;
 	font-weight: bold;
+	padding-top: 8px;
+	padding-bottom: 8px;
 
 	a {
 		color: $color-white;
-		padding-top: 8px;
-		padding-bottom: 8px;
 
 		@include block-link;
 
 		@media (max-width: $breakpoint-mobile) {
 			max-width: 90%;
-			margin-left: auto;
-			margin-right: auto;
+			margin: 0 auto;
 		}
 	}
 }
@@ -83,12 +64,46 @@ u ~ div .main-wrapper {
 	max-width: 242px;
 }
 
+
+.header-links-outer {
+	@media (max-width: $breakpoint-mobile) {
+		display: none;
+	}
+}
+
+.header-links {
+	margin-top: 8px;
+
+	td {
+		font-size: 10.5px;
+		line-height: 11px;
+		font-weight: bold;
+		white-space: nowrap;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.footer-links-outer {
+	display: none;
+
+	@media (max-width: $breakpoint-mobile) {
+		display: table !important;
+	}
+}
+
+.footer-links {
+	width: 84%;
+}
+
 .footer-links td {
-	font-size: 12px;
+	font-size: 11px;
 	font-weight: bold;
 	letter-spacing: 1.2px;
 	padding-left: 15px;
 	padding-right: 15px;
+	border-bottom: 1px solid #e5e5e5;
+	width: 100%;
 
 	a {
 		@include block-link;
@@ -103,23 +118,26 @@ u ~ div .main-wrapper {
 	}
 }
 
+.footer-shop-all {
+	font-weight: normal !important;
+	padding-bottom: 20px !important;
+}
+
 .footer-links-padding {
 	padding-top: 31px;
 }
 
 .bops-bar {
-	letter-spacing: 0.8px;
-	line-height: 22px;
-	margin-top: 31px;
-
 	@media (max-width: $breakpoint-mobile) {
 		width: 84%;
-		margin-top: 25px !important;
 	}
 
-	td {
-		padding-top: 10px;
-		padding-bottom: 10px;
+	.bops-bar-td {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		letter-spacing: 0.8px;
+		line-height: 22px;
+		text-align: center;
 	}
 
 	a {
@@ -146,21 +164,30 @@ u ~ div .main-wrapper {
 	}
 }
 
+.bops-bar-inner {
+	td {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		@media (max-width: $breakpoint-mobile) {
+			width: 100% !important;
+		}
+	}
+}
+
 .social-app {
-	margin-top: 37px;
+	td {
+		font-size: 11px;
+		letter-spacing: 1.2px;
+	}
 
 	@media (max-width: $breakpoint-mobile) {
 		width: 84%;
-		margin-top: 27px !important;
 
 		td {
-			display: block;
+			display: block !important;
+			margin-top: 5px;
 		}
-	}
-
-	p {
-		margin-bottom: 10px;
-		margin-top: 0;
 	}
 }
 
@@ -169,8 +196,8 @@ u ~ div .main-wrapper {
 	padding-bottom: 0;
 
 	@media (max-width: $breakpoint-mobile) {
-		padding-top: 28px !important;
 		padding-bottom: 5px !important;
+		padding-top: 20px !important;
 	}
 }
 
@@ -196,19 +223,15 @@ u ~ div .main-wrapper {
 
 	@media (max-width: $breakpoint-mobile) {
 		border-right: none !important;
-		border-bottom: 1px solid $color-light-gray;
-		padding-bottom: 31px !important;
 		padding-top: 0 !important;
 	}
 }
 
 .footer-sub {
-	margin-top: 40px;
 	border-top: 1px solid $color-light-gray;
 
 	@media (max-width: $breakpoint-mobile) {
 		width: 84%;
-		margin-top: 31px !important;
 	}
 }
 
@@ -236,33 +259,21 @@ u ~ div .main-wrapper {
 }
 
 .copyright {
-	margin-top: 15px;
-
 	td {
 		padding-top: 4px;
 		color: #767676;
+		mso-line-height-rule: exactly;
+		line-height: 14px;
+		font-size: 10px;
 
-		p {
-			font-size: 10px;
-			line-height: 11px;
-
-			a {
-				text-decoration: underline;
-				color: #767676 !important;
-			}
-		}
-
-		@media (max-width: $breakpoint-mobile) {
-			padding-top: 11px !important;
+		a {
+			text-decoration: underline;
+			color: #767676 !important;
 		}
 	}
 
 	@media (max-width: $breakpoint-mobile) {
-		width: 250px;
-
-		p {
-			line-height: 15px;
-		}
+		width: 260px;
 
 		span {
 			display: block !important;
@@ -271,8 +282,6 @@ u ~ div .main-wrapper {
 }
 
 .fine-print {
-	margin-top: 30px;
-
 	@media (max-width: $breakpoint-mobile) {
 		width: 100%;
 	}
@@ -307,4 +316,38 @@ u ~ div .main-wrapper {
 	}
 }
 
+.icon-header-text {
+	mso-line-height-rule: exactly;
+	line-height: 23px;
+}
 
+.loyalist-banner {
+	display: none;
+
+	@media (max-width: $breakpoint-mobile) {
+		display: table !important;
+		background: $color-gray;
+		width: 84%;
+
+		td {
+			text-align: center;
+			width: 100%;
+			font-size: 14px;
+			padding: 20px 0;
+
+			span {
+				display: block;
+				font-weight: bold;
+			}
+
+			img {
+				display: block;
+				margin: 0 auto 7px auto;
+			}
+
+			a {
+				@include block-link;
+			}
+		}
+	}
+}
