@@ -53,8 +53,34 @@ $footer-links-padding-y: 12px;
 $footer-links-padding-y-small: 12px;
 $sub-mobile-max-width: 86%;
 
+/* spacer */
+.spacer {
+	@media (max-width: $breakpoint-mobile) {
+		width: 100% !important;
+		max-height: none !important;
+	}
 
-.top-black-bar {
+	td {
+		line-height: 0;
+	}
+}
+
+/* show mobile */
+.show-mobile {
+	display: none;
+	font-size: 0;
+	max-height: 0;
+	line-height: 0;
+	mso-hide: all;
+
+	@media (max-width: $breakpoint-mobile) {
+		display: table !important;
+		max-height: none !important;
+	}
+}
+
+/* optional top promo */
+.top-promo {
 	background: $color-black;
 	color: $color-white;
 	font-size: 11px;
@@ -76,14 +102,7 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
-.loyalist-spacer {
-	@media (max-width: $breakpoint-mobile) {
-		td {
-			height: 26px !important;
-		}
-	}
-}
-
+/* bloomingdales logo */
 .b-logo {
 	max-width: 242px;
 
@@ -92,35 +111,70 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
+/* header links */
 .header-links-outer {
 	@media (max-width: $breakpoint-mobile) {
 		display: none;
 	}
+
+	.header-links {
+		td {
+			font-size: 11px;
+			line-height: 11px;
+			font-weight: bold;
+			white-space: nowrap;
+			padding-left: 8px;
+			padding-right: 8px;
+			letter-spacing: 0.5px;
+		}
+	}
 }
 
-.spacer {
+/* loyalist spacer */
+.loyalist-spacer {
 	@media (max-width: $breakpoint-mobile) {
-		width: 100% !important;
-		max-height: none !important;
-	}
-
-	td {
-		line-height: 0;
+		td {
+			height: 26px !important;
+		}
 	}
 }
 
-.header-links {
-	td {
-		font-size: 11px;
-		line-height: 11px;
-		font-weight: bold;
-		white-space: nowrap;
-		padding-left: 8px;
-		padding-right: 8px;
-		letter-spacing: 0.5px;
+/* loyalist banner */
+.loyalist-banner {
+	display: none;
+
+	@media (max-width: $breakpoint-mobile) {
+		display: table !important;
+		background: $color-gray;
+		width: $sub-mobile-max-width;
+
+		td {
+			text-align: center;
+			width: 100%;
+			font-size: 14px !important;
+			padding: 20px 0 !important;
+			line-height: 23px !important;
+			max-height: none !important;
+			letter-spacing: 0.5px;
+
+			span {
+				display: block;
+				font-weight: bold;
+			}
+
+			img {
+				display: block;
+				margin: 0 auto 7px auto;
+			}
+
+			a {
+				@include block-link;
+			}
+		}
 	}
 }
 
+/* footer links */
 .footer-links {
 	width: $sub-mobile-max-width;
 	margin-top: 17px;
@@ -145,30 +199,14 @@ $sub-mobile-max-width: 86%;
 	tr {
 		border-bottom: 1px solid #e5e5e5;
 	}
-}
 
-.show-mobile {
-	display: none;
-	font-size: 0;
-	max-height: 0;
-	line-height: 0;
-	mso-hide: all;
-
-	@media (max-width: $breakpoint-mobile) {
-		display: table !important;
-		max-height: none !important;
+	.footer-shop-all {
+		font-weight: normal !important;
+		letter-spacing: 1.1px;
 	}
 }
 
-.footer-shop-all {
-	font-weight: normal !important;
-	letter-spacing: 1.1px;
-}
-
-.footer-links-padding {
-	padding-top: 31px;
-}
-
+/* bops bar */
 .bops-bar {
 	@media (max-width: $breakpoint-mobile) {
 		width: $sub-mobile-max-width;
@@ -211,6 +249,7 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
+/* bops bar inner */
 .bops-bar-inner {
 	th {
 		padding-top: 0;
@@ -224,10 +263,14 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
-.apple-icon-td {
-	padding-top: 11px;
+/* social app spacer */
+.social-app-spacer td {
+	@media (max-width: $breakpoint-mobile) {
+		height: 30px !important;
+	}
 }
 
+/* social/app */
 .social-app {
 	th {
 		font-size: 11px;
@@ -245,35 +288,7 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
-.app-outer {
-	padding-top: 0;
-	padding-bottom: 0;
-
-	@media (max-width: $breakpoint-mobile) {
-		padding-bottom: 5px !important;
-		padding-top: 20px !important;
-	}
-}
-
-.app-icon {
-	max-width: 122px;
-}
-
-.social-icon-outer-td {
-	padding-top: 15px;
-}
-
-.social-icon-container {
-	td {
-		width: 44px !important;
-
-		@media (max-width: $breakpoint-mobile) {
-			width: 44px !important;
-			display: table-cell !important;
-		}
-	}
-}
-
+/* social btns */
 .social-btns {
 	padding-top: 0;
 	padding-bottom: 0;
@@ -285,6 +300,71 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
+/* social icon outer */
+.social-icon-outer-td {
+	padding-top: 15px;
+}
+
+/* social icon container */
+.social-icon-container {
+	td {
+		width: 44px !important;
+
+		@media (max-width: $breakpoint-mobile) {
+			width: 44px !important;
+			display: table-cell !important;
+		}
+	}
+}
+
+/* app outer */
+.app-outer {
+	padding-top: 0;
+	padding-bottom: 0;
+
+	@media (max-width: $breakpoint-mobile) {
+		padding-bottom: 5px !important;
+		padding-top: 20px !important;
+	}
+}
+
+/* app icon outer */
+.app-icon-outer {
+	@media (max-width: $breakpoint-mobile) {
+		margin-top: 12px;
+	}
+}
+
+/* icon header text */
+.icon-header-text {
+	mso-line-height-rule: exactly;
+	line-height: 23px;
+	font-size: 11px;
+	font-weight: normal;
+
+	@media (max-width: $breakpoint-mobile) {
+		line-height: 10px !important;
+	}
+}
+
+/* apple icon td */
+.apple-icon-td {
+	padding-top: 11px;
+}
+
+/* app icon */
+.app-icon {
+	max-width: 122px;
+}
+
+/* footer sub spacer */
+.footer-sub-spacer td {
+	@media (max-width: $breakpoint-mobile) {
+		height: 30px !important;
+	}
+}
+
+/* footer sub */
 .footer-sub {
 	border-top: 1px solid $color-light-gray;
 
@@ -293,12 +373,12 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
-.footer-sub-spacer td {
-	@media (max-width: $breakpoint-mobile) {
-		height: 30px !important;
-	}
+/* footer links padding */
+.footer-links-padding {
+	padding-top: 31px;
 }
 
+/* footer links sub */
 .footer-links-sub th {
 	font-size: 10px !important;
 	padding-left: 8px;
@@ -319,6 +399,7 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
+/* copyright */
 .copyright {
 	td {
 		padding-top: 4px;
@@ -342,6 +423,7 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
+/* fine print */
 .fine-print {
 	@media (max-width: $breakpoint-mobile) {
 		width: 100%;
@@ -373,63 +455,6 @@ $sub-mobile-max-width: 86%;
 		@media (max-width: $breakpoint-mobile) {
 			padding-left: 30px !important;
 			padding-right: 30px !important;
-		}
-	}
-}
-
-.app-icon-outer {
-	@media (max-width: $breakpoint-mobile) {
-		margin-top: 12px;
-	}
-}
-
-.social-app-spacer td {
-	@media (max-width: $breakpoint-mobile) {
-		height: 30px !important;
-	}
-}
-
-.icon-header-text {
-	mso-line-height-rule: exactly;
-	line-height: 23px;
-	font-size: 11px;
-	font-weight: normal;
-
-	@media (max-width: $breakpoint-mobile) {
-		line-height: 10px !important;
-	}
-}
-
-.loyalist-banner {
-	display: none;
-
-	@media (max-width: $breakpoint-mobile) {
-		display: table !important;
-		background: $color-gray;
-		width: $sub-mobile-max-width;
-
-		td {
-			text-align: center;
-			width: 100%;
-			font-size: 14px !important;
-			padding: 20px 0 !important;
-			line-height: 23px !important;
-			max-height: none !important;
-			letter-spacing: 0.5px;
-
-			span {
-				display: block;
-				font-weight: bold;
-			}
-
-			img {
-				display: block;
-				margin: 0 auto 7px auto;
-			}
-
-			a {
-				@include block-link;
-			}
 		}
 	}
 }
