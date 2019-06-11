@@ -29,6 +29,20 @@
 //@import 'hero';
 @import 'utilities';
 
+@font-face {
+	font-family: 'Avenir';
+	src: local('Avenir Roman'), local('Avenir LT W01 55 Roman'), url('https://www.bloomingdales.com/styles/common/fonts/avenir/b9ebb19d-88c1-4cbd-9baf-cf51972422ec.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Avenir';
+	src: local('Avenir Heavy'), local('Avenir LT W01 85 Heavy'), url('https://www.bloomingdales.com/styles/common/fonts/avenir/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff') format('woff');
+	font-style: normal;
+	font-weight: bold;
+}
+
 @mixin block-link() {
 	display: block;
 	height: 100%;
@@ -36,7 +50,8 @@
 }
 
 $footer-links-padding-y: 12px;
-$footer-links-padding-y-small: 4px;
+$footer-links-padding-y-small: 12px;
+$sub-mobile-max-width: 86%;
 
 
 .top-black-bar {
@@ -55,15 +70,27 @@ $footer-links-padding-y-small: 4px;
 
 		@media (max-width: $breakpoint-mobile) {
 			max-width: 90%;
-			margin: 0 auto;
+			line-height: 16px;
+			margin: 2px auto 0 auto;
+		}
+	}
+}
+
+.loyalist-spacer {
+	@media (max-width: $breakpoint-mobile) {
+		td {
+			height: 26px !important;
 		}
 	}
 }
 
 .b-logo {
 	max-width: 242px;
-}
 
+	@media (max-width: $breakpoint-mobile) {
+		width: 63%;
+	}
+}
 
 .header-links-outer {
 	@media (max-width: $breakpoint-mobile) {
@@ -94,50 +121,30 @@ $footer-links-padding-y-small: 4px;
 	}
 }
 
-.footer-links-outer {
-	display: none;
-
-	@media (max-width: $breakpoint-mobile) {
-		display: table !important;
-	}
-}
-
 .footer-links {
-	width: 84%;
-}
+	width: $sub-mobile-max-width;
+	margin-top: 17px;
+	margin-bottom: 28px;
 
-.footer-links td {
-	a {
-		@include block-link;
-		padding-top: $footer-links-padding-y;
-		padding-bottom: $footer-links-padding-y;
+	td {
+		a {
+			@include block-link;
+		}
+
+		@media (max-width: $breakpoint-mobile) {
+			display: block !important;
+			font-size: 11px !important;
+			line-height: 12px !important;
+			font-weight: bold;
+			letter-spacing: 1.2px;
+			width: 100%;
+			padding: 22px 15px;
+		}
 	}
 
-	@media (max-width: $breakpoint-mobile) {
-		display: block;
-		padding-top: $footer-links-padding-y-small;
-		padding-bottom: $footer-links-padding-y-small;
-		font-size: 11px !important;
-		line-height: 12px !important;
-		font-weight: bold;
-		letter-spacing: 1.2px;
-		padding-left: 15px;
-		padding-right: 15px;
+	tr {
 		border-bottom: 1px solid #e5e5e5;
-		width: 100%;
 	}
-}
-
-.color1 {
-	background: #0000ff !important;
-}
-
-.color2 {
-	background: #f000ff !important;
-}
-
-.color3 {
-	background: #00f0ff !important;
 }
 
 .show-mobile {
@@ -155,7 +162,7 @@ $footer-links-padding-y-small: 4px;
 
 .footer-shop-all {
 	font-weight: normal !important;
-	padding-bottom: 20px !important;
+	letter-spacing: 1.1px;
 }
 
 .footer-links-padding {
@@ -164,7 +171,7 @@ $footer-links-padding-y-small: 4px;
 
 .bops-bar {
 	@media (max-width: $breakpoint-mobile) {
-		width: 84%;
+		width: $sub-mobile-max-width;
 	}
 
 	.bops-bar-td {
@@ -228,7 +235,7 @@ $footer-links-padding-y-small: 4px;
 	}
 
 	@media (max-width: $breakpoint-mobile) {
-		width: 84%;
+		width: $sub-mobile-max-width;
 
 		th {
 			width: 100% !important;
@@ -282,7 +289,13 @@ $footer-links-padding-y-small: 4px;
 	border-top: 1px solid $color-light-gray;
 
 	@media (max-width: $breakpoint-mobile) {
-		width: 84%;
+		width: $sub-mobile-max-width;
+	}
+}
+
+.footer-sub-spacer td {
+	@media (max-width: $breakpoint-mobile) {
+		height: 30px !important;
 	}
 }
 
@@ -302,11 +315,7 @@ $footer-links-padding-y-small: 4px;
 
 	a {
 		@include block-link;
-
-		@media (max-width: $breakpoint-mobile) {
-			padding-top: 3.2px !important;
-			padding-bottom: 3.2px !important;
-		}
+		padding: 0.8px 0;
 	}
 }
 
@@ -368,9 +377,27 @@ $footer-links-padding-y-small: 4px;
 	}
 }
 
+.app-icon-outer {
+	@media (max-width: $breakpoint-mobile) {
+		margin-top: 12px;
+	}
+}
+
+.social-app-spacer td {
+	@media (max-width: $breakpoint-mobile) {
+		height: 30px !important;
+	}
+}
+
 .icon-header-text {
 	mso-line-height-rule: exactly;
 	line-height: 23px;
+	font-size: 11px;
+	font-weight: normal;
+
+	@media (max-width: $breakpoint-mobile) {
+		line-height: 10px !important;
+	}
 }
 
 .loyalist-banner {
@@ -379,7 +406,7 @@ $footer-links-padding-y-small: 4px;
 	@media (max-width: $breakpoint-mobile) {
 		display: table !important;
 		background: $color-gray;
-		width: 84%;
+		width: $sub-mobile-max-width;
 
 		td {
 			text-align: center;
@@ -388,6 +415,7 @@ $footer-links-padding-y-small: 4px;
 			padding: 20px 0 !important;
 			line-height: 23px !important;
 			max-height: none !important;
+			letter-spacing: 0.5px;
 
 			span {
 				display: block;

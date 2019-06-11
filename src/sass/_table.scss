@@ -17,3 +17,14 @@ td {
 	font-size: $font-size-base;
 	line-height: $line-height-base;
 }
+
+table,
+th {
+	font-family: $font-family-base !important; /* 1 */
+}
+
+th {
+	/* 2 */
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+}
