@@ -402,26 +402,27 @@ $sub-mobile-max-width: 86%;
 	a {
 		@include block-link;
 		padding: 0.8px 0;
+		font-weight: normal;
 	}
 }
 
 /* copyright */
 .copyright {
 	td {
-		padding-top: 4px;
-		color: #767676;
+		padding-top: 10px;
 		mso-line-height-rule: exactly;
 		line-height: 14px;
 		font-size: 10px;
+		color: #222222;
 
 		a {
 			text-decoration: underline;
-			color: #767676 !important;
+			color: #222222 !important;
 		}
 	}
 
 	@media (max-width: $breakpoint-mobile) {
-		width: 260px;
+		width: 230px;
 
 		span {
 			display: block !important;
