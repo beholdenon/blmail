@@ -65,6 +65,12 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
+/* gmail app 100% width */
+.main-wrapper {
+	width: 100%;
+	min-width: 100vw;
+}
+
 /* show mobile */
 .show-mobile {
 	display: none;
