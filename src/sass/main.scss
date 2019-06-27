@@ -206,7 +206,11 @@ $sub-mobile-max-width: 86%;
 			font-weight: bold;
 			letter-spacing: 1.2px;
 			width: 100%;
-			padding: 22px 15px;
+			padding: 0 15px;
+
+			a {
+				padding: 22px 0;
+			}
 		}
 	}
 
@@ -217,6 +221,8 @@ $sub-mobile-max-width: 86%;
 	.footer-shop-all {
 		font-weight: normal !important;
 		letter-spacing: 1.1px;
+		padding-bottom: 22px;
+		padding-top: 22px;
 	}
 }
 
