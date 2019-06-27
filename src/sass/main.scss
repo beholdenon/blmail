@@ -68,7 +68,6 @@ $sub-mobile-max-width: 86%;
 /* gmail app 100% width */
 .main-wrapper {
 	width: 100%;
-	min-width: 100vw;
 }
 
 /* show mobile */
@@ -126,12 +125,18 @@ $sub-mobile-max-width: 86%;
 	.header-links {
 		td {
 			font-size: 11px;
-			line-height: 11px;
+			line-height: 23px;
 			font-weight: bold;
 			white-space: nowrap;
 			padding-left: 8px;
 			padding-right: 8px;
 			letter-spacing: 0.5px;
+			padding-top: 4px;
+			padding-bottom: 4px;
+
+			a {
+				@include block-link;
+			}
 		}
 	}
 }
@@ -185,8 +190,11 @@ $sub-mobile-max-width: 86%;
 	width: $sub-mobile-max-width;
 	margin-top: 17px;
 	margin-bottom: 28px;
+	background: #ffffff;
 
 	td {
+		background: #ffffff;
+
 		a {
 			@include block-link;
 		}
@@ -231,7 +239,7 @@ $sub-mobile-max-width: 86%;
 		text-align: right !important;
 	}
 
-	a {
+	span {
 		font-weight: normal;
 		margin-left: 10px;
 
