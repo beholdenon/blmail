@@ -10,12 +10,13 @@ var release = require( './gulp/tasks/release.js' );
 var sass = require( './gulp/tasks/sass.js' );
 var assets = require( './gulp/tasks/assets.js' );
 
-// Build task
+// Build task*
 gulp.task(
 	'build',
 	gulp.series( [
 		sass.lint,
 		sass.build,
+		html.build,
 		html.inline,
 		gulp.parallel( [
 			assets.clean,
@@ -35,6 +36,7 @@ gulp.task(
 			gulp.series( [
 				sass.lint,
 				sass.build,
+				html.build,
 				html.inline,
 				gulp.parallel( [
 					sass.clean,

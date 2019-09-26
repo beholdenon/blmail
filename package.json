@@ -30,5 +30,8 @@
     "mime": "^2.3.1",
     "fresh": "^0.5.2",
     "gulp-htmlmin": "^4.0.0"
+  },
+  "dependencies": {
+    "gulp-include": "^2.4.1"
   }
 }

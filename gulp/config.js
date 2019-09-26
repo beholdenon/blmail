@@ -1,8 +1,12 @@
 module.exports = {
 	paths: {
 		html: {
+			build: {
+				src: [ 'src/templates/**/*.html', 'src/campaigns/**/*.html' ],
+				dest: [ 'dist' ],
+			},
 			inline: {
-				src: [ 'src/templates/**/*.html' ],
+				src: [ 'dist/*.html' ],
 				dest: [ 'dist' ],
 			},
 			clean: {
@@ -34,6 +38,7 @@ module.exports = {
 			src: [
 				'src/sass/**/*.scss',
 				'src/templates/**/*.html',
+				'src/campaigns/**/*.html',
 			],
 		},
 		assets: {

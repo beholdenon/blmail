@@ -1,4 +1,5 @@
 var gulp = require( 'gulp' );
+var include = require('gulp-include')
 var juice = require( '@akzhan/gulp-juice' );
 var htmlmin = require( 'gulp-htmlmin' );
 var connect = require( 'gulp-connect' );
@@ -7,8 +8,17 @@ var connect = require( 'gulp-connect' );
 var config = require( '../config.js' );
 
 // Export functions
+exports.build = build;
 exports.inline = inline;
 exports.clean = clean;
+
+// Build HTML includes
+function build() {
+	return gulp.src( config.paths.html.build.src )
+		.pipe(include())
+     	 .on('error', console.log)
+    	.pipe( gulp.dest( config.paths.html.build.dest ) )
+}
 
 // Inline CSS
 function inline() {
