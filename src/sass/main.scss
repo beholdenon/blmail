@@ -24,30 +24,8 @@
 @import 'typography';
 @import 'table';
 @import 'grid';
-//@import 'preheader';
-//@import 'buttons';
-//@import 'hero';
 @import 'utilities';
-
-@font-face {
-	font-family: 'Avenir';
-	src: local('Avenir Roman'), local('Avenir LT W01 55 Roman'), url('https://www.bloomingdales.com/styles/common/fonts/avenir/b9ebb19d-88c1-4cbd-9baf-cf51972422ec.woff') format('woff');
-	font-style: normal;
-	font-weight: normal;
-}
-
-@font-face {
-	font-family: 'Avenir';
-	src: local('Avenir Heavy'), local('Avenir LT W01 85 Heavy'), url('https://www.bloomingdales.com/styles/common/fonts/avenir/7147ec3a-8ff8-4ec9-8c5c-bd1571dc6ae6.woff') format('woff');
-	font-style: normal;
-	font-weight: bold;
-}
-
-@mixin block-link() {
-	display: block;
-	height: 100%;
-	width: 100%;
-}
+@import 'mixins';
 
 $footer-links-padding-y: 12px;
 $footer-links-padding-y-small: 12px;
@@ -87,11 +65,11 @@ $sub-mobile-max-width: 86%;
 
 /* optional top promo */
 .top-promo {
+	@include avenir-heavy();
 	background: $color-black;
 	color: $color-white;
 	font-size: 11px;
 	line-height: 13px;
-	font-weight: bold;
 	padding-top: 8px;
 	padding-bottom: 8px;
 
@@ -114,6 +92,15 @@ $sub-mobile-max-width: 86%;
 	height: 8px;
 }
 
+/* logo */
+.logo-outer-td {
+	@media (max-width: $breakpoint-mobile) {
+		max-width: 83%;
+		margin: 0 auto;
+		border-bottom: 1px solid #cccccc;
+	}
+}
+
 /* header links */
 .header-links-outer {
 	@media (max-width: $breakpoint-mobile) {
@@ -122,9 +109,9 @@ $sub-mobile-max-width: 86%;
 
 	.header-links {
 		td {
+			@include avenir-heavy();
 			font-size: 11px;
 			line-height: 23px;
-			font-weight: bold;
 			white-space: nowrap;
 			padding-left: 8px;
 			padding-right: 8px;
@@ -152,6 +139,10 @@ $sub-mobile-max-width: 86%;
 			letter-spacing: 0.4px;
 		}
 	}
+}
+
+div > u ~ div .header-links {
+	display: none !important;
 }
 
 /* loyalist spacer */
@@ -182,8 +173,8 @@ $sub-mobile-max-width: 86%;
 			letter-spacing: 0.5px;
 
 			span {
+				@include avenir-heavy();
 				display: block;
-				font-weight: bold;
 			}
 
 			img {
@@ -213,10 +204,10 @@ $sub-mobile-max-width: 86%;
 		}
 
 		@media (max-width: $breakpoint-mobile) {
+			@include avenir-heavy();
 			display: block !important;
 			font-size: 11px !important;
 			line-height: 12px !important;
-			font-weight: bold;
 			letter-spacing: 1.2px;
 			width: 100%;
 			padding: 0 15px;
@@ -246,12 +237,12 @@ $sub-mobile-max-width: 86%;
 	}
 
 	.bops-bar-td {
+		@include avenir-heavy();
 		padding-top: 25px;
 		padding-bottom: 24px;
 		letter-spacing: 0.8px;
 		line-height: 22px;
 		text-align: center;
-		font-weight: bold;
 	}
 
 	.column-1 {
@@ -493,7 +484,7 @@ $sub-mobile-max-width: 86%;
 	}
 }
 
-/* email 1 test */
+/* template 1 */
 .blm-header-outer-td {
 	padding-bottom: 48px;
 	padding-top: 48px;
@@ -633,8 +624,8 @@ $sub-mobile-max-width: 86%;
 }
 
 .blm-button {
+	@include avenir-heavy();
 	font-size: 15px;
-	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.3px;
 	border-top: 1px solid #cccccc;
@@ -648,16 +639,15 @@ $sub-mobile-max-width: 86%;
 }
 
 .blm-button-link {
-	display: inline-block;
+	@include block-link();
 	padding: 11px 0 9px 0;
-	width: 100%;
 }
 
 /***** blm type ******/
 .blm-text-brand {
+	@include avenir-heavy();
 	font-size: 12px;
 	line-height: 12px;
-	font-weight: bold;
 	text-transform: uppercase;
 	color: #000000;
 	letter-spacing: 0.3px;
@@ -665,9 +655,9 @@ $sub-mobile-max-width: 86%;
 }
 
 .blm-text-desc {
+	@include avenir-heavy();
 	font-size: 12px;
 	line-height: 12px;
-	font-weight: bold;
 	text-transform: uppercase;
 	color: #808080;
 	letter-spacing: 0.3px;
@@ -675,10 +665,10 @@ $sub-mobile-max-width: 86%;
 }
 
 .blm-type-subhead-small {
+	@include avenir-heavy();
 	font-size: 16px;
 	line-height: 16px;
 	letter-spacing: 0.7px;
-	font-weight: bold;
 	margin: 0;
 
 	@media (max-width: $breakpoint-mobile) {
@@ -688,10 +678,10 @@ $sub-mobile-max-width: 86%;
 }
 
 .blm-type-subhead {
+	@include avenir-heavy();
 	font-size: 24px;
 	line-height: 24px;
 	letter-spacing: 1px;
-	font-weight: bold;
 	margin: 0;
 
 	@media (max-width: $breakpoint-mobile) {
@@ -701,10 +691,10 @@ $sub-mobile-max-width: 86%;
 }
 
 .blm-type-head {
+	@include avenir-heavy();
 	font-size: 40px;
 	line-height: 40px;
 	letter-spacing: 2px;
-	font-weight: bold;
 	margin: 0;
 
 	@media (max-width: $breakpoint-mobile) {
@@ -755,7 +745,7 @@ $sub-mobile-max-width: 86%;
 }
 
 .blm-text-buttons-td {
-	font-weight: bold;
+	@include avenir-heavy();
 	display: inline-block;
 	padding: 0 24px;
 	text-align: center;

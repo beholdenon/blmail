@@ -1,0 +1,14 @@
+/* =============================================================================
+   MIXINS
+   ========================================================================== */
+
+@mixin block-link() {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+@mixin avenir-heavy() {
+	font-weight: bold;
+	//font-family: 'Avenir LT W01_85 Heavy1475544', 'Avenir', 'Helvetica', sans-serif;
+}
