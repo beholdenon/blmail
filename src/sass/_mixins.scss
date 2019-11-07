@@ -12,3 +12,8 @@
 	font-weight: bold;
 	//font-family: 'Avenir LT W01_85 Heavy1475544', 'Avenir', 'Helvetica', sans-serif;
 }
+
+@mixin white-bg() {
+	background-color: #ffffff;
+	background-image: url('http://f.e.bloomingdales.com/i/32/392907741/110119_white_bg.gif');
+}

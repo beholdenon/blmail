@@ -87,13 +87,22 @@ $sub-mobile-max-width: 86%;
 }
 
 /* empty top promo */
+
+
 .top-promo-collapse {
 	background: $color-black;
 	height: 8px;
 }
 
 /* logo */
+
+.logo-container {
+	@include white-bg;
+}
+
 .logo-outer-td {
+	@include white-bg;
+
 	@media (max-width: $breakpoint-mobile) {
 		max-width: 83%;
 		margin: 0 auto;
@@ -160,7 +169,6 @@ div > u ~ div .header-links {
 
 	@media (max-width: $breakpoint-mobile) {
 		display: table !important;
-		background: $color-gray;
 		width: $sub-mobile-max-width;
 
 		td {
@@ -190,17 +198,21 @@ div > u ~ div .header-links {
 }
 
 /* footer links */
+.footer-links-outer {
+	@include white-bg();
+}
+
 .footer-links {
 	width: $sub-mobile-max-width;
 	margin-top: 17px;
 	margin-bottom: 28px;
-	background: #ffffff;
 
 	td {
-		background: #ffffff;
+		color: #000000 !important;
 
 		a {
 			@include block-link;
+			color: #000000 !important;
 		}
 
 		@media (max-width: $breakpoint-mobile) {
@@ -518,6 +530,15 @@ div > u ~ div .header-links {
 			padding-bottom: 8px !important;
 		}
 	}
+
+	.blm-text-buttons-td {
+		display: table-cell !important;
+		padding-top: 17px;
+
+		@media (max-width: $breakpoint-mobile) {
+			padding-top: 10px !important;
+		}
+	}
 }
 
 .blm-text-block {
@@ -559,7 +580,7 @@ div > u ~ div .header-links {
 }
 
 .blm-product-grid {
-	width: 98%;
+	width: 98% !important;
 	max-width: 98%;
 
 	@media (max-width: $breakpoint-mobile) {
@@ -657,7 +678,7 @@ div > u ~ div .header-links {
 .blm-text-desc {
 	@include avenir-heavy();
 	font-size: 12px;
-	line-height: 12px;
+	line-height: 14px;
 	text-transform: uppercase;
 	color: #808080;
 	letter-spacing: 0.3px;
@@ -715,6 +736,19 @@ div > u ~ div .header-links {
 	}
 }
 
+.blm-head-links {
+	@include avenir-heavy();
+	font-size: 18px;
+	letter-spacing: 0.5px;
+	line-height: 18px;
+	margin: 0;
+
+	@media (max-width: $breakpoint-mobile) {
+		font-size: 14px !important;
+		line-height: 14px !important;
+	}
+}
+
 /***** blm photos ******/
 .blm-photo-outer-td {
 	padding-bottom: 51px;
@@ -750,6 +784,7 @@ div > u ~ div .header-links {
 	padding: 0 24px;
 	text-align: center;
 	letter-spacing: 1px;
+	text-transform: uppercase;
 
 	@media (max-width: $breakpoint-mobile) {
 		display: block !important;
@@ -762,4 +797,15 @@ div > u ~ div .header-links {
 
 .blm-text-link-none {
 	text-decoration: none;
+}
+
+.blm-product-grid-header {
+	@include avenir-heavy();
+	padding: 0 24px 10px 24px;
+	font-size: 16px;
+	letter-spacing: 0.5px;
+
+	@media (max-width: $breakpoint-mobile) {
+		font-size: 14px !important;
+	}
 }

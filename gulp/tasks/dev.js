@@ -9,7 +9,7 @@ function server( done ) {
 		port: 3000,
 		root: 'dist/',
 		livereload: true,
-		host: '11.177.174.50',
+		host: 'localhost',
 	} );
 
 	done();
