@@ -20,7 +20,7 @@
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-combine-mq": "^0.4.0",
-    "gulp-connect": "^5.5.0",
+    "gulp-connect": "^5.7.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-stylelint": "^7.0.0",
